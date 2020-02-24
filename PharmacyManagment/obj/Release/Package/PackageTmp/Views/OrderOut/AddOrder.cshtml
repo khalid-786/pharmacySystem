@@ -1,0 +1,32 @@
+﻿@model PharmacyManagment.Models.ViewModels.OrderOut.OrderOutVM
+
+@{
+    ViewBag.Title = "بيع الأدوية";
+}
+
+<div class="alert alert-info text-center">
+    <h2 style="color:#000;">مرحبا بك في شاشة بيع الأدوية للزبائن </h2>
+</div>
+@if (TempData["SM"] != null)
+{
+    <div class="alert alert-success text-center">
+        @TempData["SM"]
+    </div>
+}
+@ViewBag.OrdrId
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="إنشاء فاتورة جديدة" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+

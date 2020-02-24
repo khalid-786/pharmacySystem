@@ -1,0 +1,6 @@
+.collapsing.width  { 
+    width: 0;
+    height: auto;
+    .transition(width 0.35s ease);
+}
+ 

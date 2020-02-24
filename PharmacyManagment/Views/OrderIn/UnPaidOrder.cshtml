@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PharmacyManagment.Models.ViewModels.OrderIn.OrderInVM>
+
+@{
+    ViewBag.Title = "الفواتير الغير مدفوعة كاملة";
+}
+
+<div class="text-center alert alert-info">الفواتير التي عملية سدادها بالكامل</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotaleQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaidPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnpaidPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrderDate)
+        </th>
+        <th>
+             مهلة التسديد
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalePrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotaleQuantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaidPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnpaidPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrderDate)
+        </td>
+        <td>
+            @item.PayementDate.ToShortDateString()
+        </td>
+        <td>
+            @Html.ActionLink("تسديد الفاتورة", "paymentOrderIn", new { id=item.Id } ,new { @class = "btn btn-success"}) |
+            @Html.ActionLink("تفاصيل", "OrderInDetials", new { id=item.Id }, new { @class = "btn btn-info" }) 
+        </td>
+    </tr>
+}
+
+</table>

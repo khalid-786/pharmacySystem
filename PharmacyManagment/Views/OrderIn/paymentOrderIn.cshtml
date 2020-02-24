@@ -1,0 +1,50 @@
+﻿@model PharmacyManagment.Models.ViewModels.OrderIn.OrderInVM
+
+@{
+    ViewBag.Title = "paymentOrderIn";
+}
+
+<h2 class="alert alert-info text-center text-primary">تسديد هذه الفاتورة </h2>
+@if (TempData["SM"] != null)
+{
+    <div class="alert alert-success text-center">
+        @TempData["SM"]
+    </div>
+}
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+       
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+        <div class="form-group">
+            @Html.LabelFor(model => model.PaidPrice, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="number"disabled="disabled" value="@Model.PaidPrice" class="form-control" />
+                <input type="number" name="PaidPrice" class="form-control" />
+                @Html.ValidationMessageFor(model => model.PaidPrice, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.UnpaidPrice, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.UnpaidPrice, new { htmlAttributes = new { @class = "form-control" , @disabled = "disabled" } })
+                @Html.ValidationMessageFor(model => model.UnpaidPrice, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+<div>
+    <a  class="btn btn-success" href="/OrderIn/printOrderAction/@Model.Id" id="printOrderLink" target="_blank">طباعة بيانات الفاتورة</a>
+</div>
+<div>
+   @Html.ActionLink("الرجوع إلىقائمة الفواتير ", "UnPaidOrder", null, new { @class = "btn btn-success" })
+</div>

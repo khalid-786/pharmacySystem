@@ -1,0 +1,32 @@
+﻿@model IEnumerable<PharmacyManagment.Models.ViewModels.Medicine.MedicineDetialsVM>
+@foreach (var item in Model) {
+    <tr class="main-data tr_@item.Id" data-id="@item.Id">
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpiryDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsHasTapes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfTapesInOneMedicine)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotaleNumberOfTapes)
+        </td>
+        <td>
+            <a onclick="showInfo(this)" class="btn btn-info" id="pay">إضافة للبيع</a>
+        </td>
+        
+    </tr>
+}
+
+

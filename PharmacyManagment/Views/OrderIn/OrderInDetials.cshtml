@@ -1,0 +1,61 @@
+﻿@model IEnumerable<PharmacyManagment.Models.ViewModels.OrderIn.OrderInDetialsVM>
+
+@{
+    ViewBag.Title = "تفاصيل الفاتورة";
+}
+
+<h2 class="alert alert-success text-center text-info">تفاصيل الفاتورة</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicinePrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicineName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicineQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicinePrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPrice)
+            </td>
+        </tr>
+    }
+    @{
+
+        int totalQuantity = 0, totalprice = 0;
+        foreach (var item in Model)
+        {
+            totalQuantity += item.MedicineQuantity;
+            totalprice += item.TotalPrice;
+
+        }
+        <tr>
+            <td>المجموع</td>
+            <td>@totalQuantity</td>
+            <td></td>
+            <td>@totalprice</td>
+        </tr>
+    }
+</table>
+@Html.ActionLink("الرجوع إلىقائمة الفواتير ", "UnPaidOrder", null , new { @class = "btn btn-success" }) 

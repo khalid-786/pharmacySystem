@@ -1,0 +1,29 @@
+﻿@model IEnumerable<PharmacyManagment.Models.ViewModels.OrderOut.OrderOutDetialsVM>
+
+@foreach (var item in Model) {
+    <tr class="oldOrderOut-data tr_" >
+        <td data-id="@item.OrderId">
+            @Html.DisplayFor(modelItem => item.MedicineName)
+        </td>
+        <td data-id="@item.MedicineId">
+            @Html.DisplayFor(modelItem => item.MedicinePrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QTY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotaleAmount)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.OrderDate)
+        </td>
+        <td >
+            @Html.DisplayFor(modelItem => item.MedicineId)
+        </td>
+        <td>
+            <a onclick="deleteOrder(this)" data-id="@item.OrderId" class='btn btn-danger'>حذف المبيعة </a>
+        </td>
+    </tr>
+}
+
+

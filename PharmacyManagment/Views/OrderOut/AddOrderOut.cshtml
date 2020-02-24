@@ -1,0 +1,340 @@
+﻿@model PharmacyManagment.Models.ViewModels.OrderOut.OrderOutVM
+
+@{
+    ViewBag.Title = "بيع الأدوية";
+
+}
+
+<div class="alert alert-info text-center">
+    مرحبا بك في شاشة بيع الأدوية للزبائن 
+</div>
+<div class="text-center text-info " style="display:none;" id="AddOrderSuccess"></div>
+<input type="button" class="btn btn-primary" id="AddOrderOut" value="إنشاء فاتورة بيع جديدة" />
+<input type="hidden" value="" name="OrderId" id="OrderId" class="form-control" />
+
+<div class="row">
+    <input class="form-control" disabled="disabled" style="direction: ltr;" type="text" placeholder="إبحث عن الدواء المراد" name="AutoSearch" id="SearhName" />
+    <div class="col-md-8" style="border-left:3px solid #00ffff; background:#FFF; border-radius:5px;">
+        <table class="table table-bordered medicineDetialstable">
+            <thead>
+                <tr>
+                    <th>  إسم الدواء </th>
+                    <th>  الكمية المتوفرة</th>
+                    <th>سعر الدواء </th>
+                    <th> إحتواءه علي أشرطة أم لا  </th>
+                    <th>المبلغ الكلي</th>
+                </tr>
+            </thead>
+            <tbody id="searchresults"></tbody>
+        </table>
+    </div>
+    <div class="col-md-4">
+        <div class="alert alert-danger text-center" id="errormessage" style="display:none;"></div>
+        <form class="form-horizontal">
+            <input type="hidden" name="remainQTY" disabled="disabled" id="remainQTY" />
+            <input type="hidden" disabled="disabled" name="price" id="price" />
+            <input type="hidden" disabled="disabled" name="old_totalAmout" id="old_totalAmout" />
+            <input type="hidden" disabled="disabled" name="old_QTY" id="old_QTY" />
+            <input type="hidden" disabled="disabled" name="mId" id="mId" />
+            <input type="hidden" disabled="disabled" name="medDetialID" id="medDetialID" />
+            <input type="hidden" disabled="disabled" id="isContainTapes" name="isContainTapes" />
+            <div class="form-group">
+                <label class="col-md-4">الكمية المطلوبة</label>
+                <div class="col-md-6">
+                    <input type="number" disabled="disabled" name="QTY" id="QTY" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-4">إسم الدواء</label>
+                <div class="col-md-6">
+                    <input type="text" disabled="disabled" name="mName" id="mName" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-4 col-md-2">
+                    <input type="button"disabled="disabled" value="بيع الدواء" id="payMedicine" class="btn btn-info" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="col-md-8" style="background:#ccc; border-radius:5px;">
+    <table class="table table-bordered orderDetialstable">
+        <thead>
+            <tr>
+                <th>  إسم الدواء </th>
+                <th>  الكمية المشتراه</th>
+                <th>سعر الدواء </th>
+                <th>المبلغ الكلي</th>
+                <th>الخيارات</th>
+            </tr>
+        </thead>
+        <tbody id="orderDetials"></tbody>
+        <tfoot>
+            <tr>
+                <td>المجموع الكلي</td>
+                <td></td>
+                <td></td>
+                <td >     
+                            <input type="number" disabled="disabled" name="sumprice" id="sumprice" class="form-control" />
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<br />
+<div class="row">
+    <div class="form-group">
+        <label class="col-md-5">
+            <input type="button" disabled="disabled" value="حفظ بيانات الفاتورة" id="saveOrderOut" class="btn btn-info" />
+        </label>
+        <div class="col-md-5">
+            <a disabled="disabled" class="btn btn-success" href="" id="printOrderOutLink" target="_blank">طباعة بيانات الفاتورة</a>
+        </div>
+    </div>
+</div>
+@section Scripts {
+
+    <script>
+        function searchFailed() {
+            $("#searchresults").html("Sorry, there was a problem with the search.");
+        }
+       
+        $(function () {
+
+            //add orderOut
+            $("#AddOrderOut").click(function () {
+
+                $.ajax({
+                    url: "AddOrderOutInfo",
+                    type: "GET",
+                    data: {},
+                    error: function (xhr, error) {
+                        alert("An error occured: " + xhr.status + " " + xhr.statusText);
+                    },
+                    success: function (data) {
+                        // $("#searchresults").html(result);
+                        if (data != null) {
+                            $("#OrderId").val(data);
+                            $("#AddOrderSuccess").fadeIn();
+                            $("#AddOrderSuccess").html("تم إنشاء الفاتورة بنجاح يمكنك إجراء عملية الطلب");
+                            $(this).attr("disabled", "disabled");
+                            $("#SearhName").removeAttr("disabled");
+                            $("#AddOrderOut").attr("disabled", "disabled");
+
+                            $("#sumprice").val("");
+                            $("#printOrderOutLink").attr("href", "/OrderOut/printCurentOrderOutAction/" + data)
+                        }
+
+                    }
+                });
+
+            });
+            $("#saveOrderOut").click(function () {
+                $("sumprice").val("");
+                $("#AddOrderOut").remove("disabled");
+                $("#SearhName").attr("disabled", "disabled");
+                $("#QTY").attr("disabled", "disabled");
+            });
+            //AutoSearh Medicine
+            //////////////////////////////////////////////////////////////
+            $("#SearhName").keyup(function () {
+
+                var AutoSearch = $(this).val().trim();
+                if (AutoSearch != "") {
+                    $.ajax({
+                        url: "searchMedicine",
+                        type: "GET",
+                        data: { AutoSearch: AutoSearch },
+                        error: function (xhr, error) {
+                            alert("An error occured: " + xhr.status + " " + xhr.statusText);
+                        },
+                        success: function (data) {
+                            // $("#searchresults").html(result);
+                            if (data != null) {
+                                var html = "";
+                                $.each(data, function (key, value) {
+                                    html += "<tr class='main-data tr_" + value.Id + "' data-id='" + value.Id + "'>";
+                                    html += "<td>" + value.MedicineName + "</td>";
+                                    if (value.IsHasTapes) {
+                                        html += "<td>" + value.TotaleNumberOfTapes + "</td>";
+                                    } else {
+                                        html += "<td>" + value.Number + "</td>";
+                                    }
+
+                                    html += "<td>" + value.Price + "</td>";
+                                    html += "<td>" + value.IsHasTapes + "</td>";
+                                    html += "<td><a onclick='showInfo(this)' class='btn btn-info' >إضافة للبيع</a> </td>";
+                                });
+                                $(".medicineDetialstable").find("tbody").html(html);
+                            }
+
+                        }
+                    });
+                }
+            });
+            $("#payMedicine").click(function () {
+                var error_message = $("#errormessage");
+                var medicine_name = $("#mName").val();
+                var medicine_price = $("#price").val();
+                var medicine_old_totaleAmount = $("#old_totalAmout").val();
+                var medicine_id = $("#mId").val();
+                var medicine_remainQTY = $("#remainQTY").val();
+                var medicine_order_id = $("#OrderId").val();
+                var medicine_isContainTapes = $("#isContainTapes").val();
+                var medicine_QTY = $("#QTY").val();
+                var medicine_old_QTY = $("#old_QTY").val();
+                var medicine_OrderDetials_id = parseInt($("#medDetialID").val());
+                var html2 = "";
+                var sum = $("#sumprice").val();
+                error_message.fadeOut(30);
+                if (medicine_QTY == "") {
+                    //alert("رجاءا أدخل كمية الدواء المراد بيعه");
+                    error_message.html("رجاءا أدخل كمية الدواء المراد بيعه");
+                    error_message.fadeIn(30);
+                    return;
+                } else if (medicine_name = "" || medicine_price == ""
+                    || medicine_remainQTY == "" || medicine_order_id == "" ||
+                    medicine_isContainTapes == "") {
+                    alert("رجاءا إختر الدواء المراد بيعه");
+                    error_message.html("رجاءا إختر الدواء المراد بيعه");
+                    error_message.fadeIn(30);
+                    return;
+                } else if (parseInt(medicine_QTY) > parseInt(medicine_remainQTY)) {
+                    // alert(medicine_remainQTY);
+                    //alert(medicine_QTY);
+                    // alert("الكمية المطلوبة أكبر من الكمية المتوفرة في الصيدلية");
+                    error_message.html("الكمية المطلوبة أكبر من الكمية المتوفرة في الصيدلية");
+                    error_message.fadeIn(30);
+                    return;
+                } else {
+                    var totalAmount = medicine_price * medicine_QTY;
+                    $.ajax({
+                        url: "payMedicine",
+                        type: "GET",
+                        data: {
+                            medicine_id: medicine_id, medicine_order_id: medicine_order_id,
+                            medicine_QTY: medicine_QTY, totalAmount: totalAmount,
+                            medicine_isContainTapes: medicine_isContainTapes, medicine_OrderDetials_id: medicine_OrderDetials_id,
+                            medicine_old_totaleAmount: medicine_old_totaleAmount, medicine_old_QTY: medicine_old_QTY
+                        },
+                        error: function (xhr, error) {
+                            alert("An error occured: " + xhr.status + " " + xhr.statusText);
+                        },
+                        success: function (data) {
+                            if (data != null) {
+                                if (data != medicine_OrderDetials_id) {
+                                    html2 += "<tr class='medicine-data tr_" + data + "' data-id='" + medicine_id + "'>";
+                                    html2 += "<td>" + $("#mName").val() + "</td>";
+                                    html2 += "<td data-id='" + medicine_remainQTY + "'> " + medicine_QTY + "</td>";
+                                    html2 += "<td data-id='" + medicine_isContainTapes + "' > " + medicine_price + "</td>";
+                                    html2 += "<td> " + totalAmount + "</td>";
+                                    html2 += "<td><a onclick='deleteOrder(this)' data-id = '" + data + "' class='btn btn-danger' >تراجع </a>" +
+                                      "          <a onclick='showpayInfo(this)' data-id = '" + data + "' class='btn btn-info' >تعديل عملية البيع</a> </td>";
+                                    $(".orderDetialstable").find("tbody").append(html2);
+                                    if (sum == "") {
+                                        $("#sumprice").val(totalAmount);
+
+                                    } else {
+                                        var totalesum = parseInt(sum) + parseInt(totalAmount);
+                                        $("#sumprice").val(totalesum);
+
+                                    }
+                                    clearInput();
+                                    $("#searchresults").html("");
+
+                                } else {
+                                    var edit = $(".tr_" + data + "");
+                                    edit.find("td").eq(1).html(medicine_QTY);
+                                    edit.find("td").eq(3).html(totalAmount);
+                                    $("#payMedicine").val("بيع الدواء");
+                                    clearInput();
+                                    var new_totalsum = (parseInt($("#sumprice").val()) + parseInt(totalAmount)) - parseInt(medicine_old_totaleAmount);
+                                  $("#sumprice").val(new_totalsum);
+                                 
+
+                                }
+                                $("#printOrderOutLink").removeAttr("disabled");
+                                $("#saveOrderOut").removeAttr("disabled");
+                            }
+                        }
+
+
+                    });
+                }
+            });
+        });
+            //show medicine info for payed
+            function showInfo(obj) {
+
+            var _this = $(obj).closest(".main-data");
+            $("#mName").val(_this.find("td").eq(0).html());
+            $("#remainQTY").val(_this.find("td").eq(1).html());
+            $("#price").val(_this.find("td").eq(2).html());
+            $("#mId").val(_this.attr("data-id"));
+            $("#isContainTapes").val(_this.find("td").eq(3).html());
+            $("#payMedicine").val("بيع الدواء");
+            $("#medDetialID").val("");
+            $("#QTY").removeAttr("disabled");
+            $("#payMedicine").removeAttr("disabled");
+            }
+            //show medicine OrderOutDetials To edit
+           function showpayInfo(obj) {
+            var _this = $(obj).closest(".medicine-data");
+            $("#mName").val(_this.find("td").eq(0).html());
+            $("#QTY").val(parseInt(_this.find("td").eq(1).html()));
+            $("#old_QTY").val(parseInt(_this.find("td").eq(1).html()));
+            $("#remainQTY").val(_this.find("td").eq(1).attr("data-id"));
+            $("#price").val(_this.find("td").eq(2).html());
+            $("#old_totalAmout").val(parseInt(_this.find("td").eq(3).html()));
+            $("#mId").val(_this.attr("data-id"));
+            $("#medDetialID").val($(obj).attr("data-id"));
+            $("#isContainTapes").val(_this.find("td").eq(2).attr("data-id"));
+            $("#payMedicine").val("تعديل تفاصيل المبيعة");
+
+           }
+            //delete the orderOutMedicine
+           function deleteOrder(obj) {
+            if (confirm("هل أنت موافق علي التراجع من عملية البيع ؟")) {
+                var _this = $(obj).closest(".medicine-data");
+                var med_ID = _this.attr("data-id");
+                var order_ID = $(obj).attr("data-id");
+                var payment_QTY = _this.find("td").eq(1).html();
+                var payment_total_price = _this.find("td").eq(3).html();
+                $.ajax({
+                    url: "backpaymedicine",
+                    type: "GET",
+                    data: { med_ID: med_ID, order_ID: order_ID, payment_QTY: payment_QTY, payment_total_price: payment_total_price },
+                    error: function (xhr, error) {
+                        alert("An error occured: " + xhr.status + " " + xhr.statusText);
+                    },
+                    success: function (data) {
+                        // $("#searchresults").html(result);
+                        _this.fadeOut("slow");
+                        var new_totalsum = (parseInt($("#sumprice").val()) - parseInt(payment_total_price));
+                        $("#sumprice").val(new_totalsum);
+                        alert(data);
+                    }
+                });
+            }
+
+           }
+            //clear input value after pay medicine
+           function clearInput() {
+            $("#mName").val("");
+            $("#price").val("");
+            $("#mId").val("");
+            $("#remainQTY").val("");
+            $("#isContainTapes").val("");
+            $("#QTY").val("");
+            $("#old_QTY").val("");
+            $("#old_totalAmout").val("");
+        }
+    </script>
+}
+
+
+
+
+
+

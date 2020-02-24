@@ -1,0 +1,87 @@
+﻿@model IEnumerable<PharmacyManagment.Models.ViewModels.OrderOut.OrderOutDetialsVM>
+
+@{
+    Layout = null;
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>فاتورة بيع أدوية</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <br />
+    <br />
+   <div class="container " style="max-width:400px;">
+       <div class="col-md-3"></div>
+       <div class="col-md-6">
+           <div class="text-center " style="font-size:23px;">
+               بسم الله الرحمن الرحيم<br />
+               فاتورة بيع أدوية
+           </div>
+           <table class="table table-bordered table-responsive " style="direction:rtl;">
+               <tr>
+                   <th>
+                       @Html.DisplayNameFor(model => model.MedicineName)
+                   </th>
+                   <th>
+                       @Html.DisplayNameFor(model => model.MedicinePrice)
+                   </th>
+                   <th>
+                       @Html.DisplayNameFor(model => model.QTY)
+                   </th>
+                   <th>
+                       @Html.DisplayNameFor(model => model.TotaleAmount)
+                   </th>
+               </tr>
+
+               @foreach (var item in Model)
+               {
+                   <tr>
+                       <td>
+                           @Html.DisplayFor(modelItem => item.MedicineName)
+                       </td>
+                       <td>
+                           @Html.DisplayFor(modelItem => item.MedicinePrice)
+                       </td>
+                       <td>
+                           @Html.DisplayFor(modelItem => item.QTY)
+                       </td>
+                       <td>
+                           @Html.DisplayFor(modelItem => item.TotaleAmount)
+                       </td>
+
+                   </tr>
+               }
+               @{
+
+                   int totalprice = 0;
+                   foreach (var item in Model)
+                   {
+                       totalprice += item.TotaleAmount;
+
+
+                   }
+                   <tr>
+                       <td>المجموع</td>
+                       <td></td>
+                       <td></td>
+                       <td>@totalprice</td>
+                   </tr>
+               }
+           </table>
+           <div class="row" style="direction:rtl;">
+               <div class="col-md-4">إسم الصيدلية :  ..................... </div>
+               <div class="col-md-4">التوقيع :  .......................</div>
+           </div>
+       </div>
+       <div class="col-md-3"></div>
+   </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+</body>
+</html>

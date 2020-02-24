@@ -1,0 +1,80 @@
+﻿@model PharmacyManagment.Models.ViewModels.Medicine.MedicineDetialsVM
+
+@{
+    ViewBag.Title = "تفاصيل الدواء";
+}
+
+<div class="alert alert-info text-center">
+    <h2 style="color:#000;">التفاصيل المتعلقة بهذا الدواء</h2>
+</div>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MedicineName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedicineName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpiryDate)
+        </dt>
+
+        <dd>
+            @Model.ExpiryDate.ToShortDateString()
+        </dd>
+        @if (Model.IsHasTapes == true)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.NumberOfTapesInOneMedicine)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.NumberOfTapesInOneMedicine)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TotaleNumberOfTapes)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TotaleNumberOfTapes)
+            </dd>
+        }else
+        {
+            <div class="">لا يحتوي هذا الدواء على أشرطة </div>
+        }
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalePrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalePrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("تعديل", "EditMedicine", new { id = Model.Id }, new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("الرجوع إلى قائمة الأدوية ", "ShowMedicines", null, new { @class = "btn btn-info" })
+</p>

@@ -1,0 +1,196 @@
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\csc.exe
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\System.Collections.Immutable.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\System.Reflection.Metadata.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\vbc.exe
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\VBCSCompiler.exe
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\VBCSCompiler.exe.config
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PharmacyManagment.dll.config
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PharmacyManagment.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PharmacyManagment.pdb
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Antlr3.Runtime.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Microsoft.Web.Infrastructure.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Newtonsoft.Json.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Helpers.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Mvc.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Optimization.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Razor.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Deployment.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Razor.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\WebGrease.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Helpers.xml
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Mvc.xml
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Optimization.xml
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Razor.xml
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.xml
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Deployment.xml
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Razor.xml
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Antlr3.Runtime.pdb
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Newtonsoft.Json.xml
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\obj\Debug\PharmacyManagment.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\obj\Debug\PharmacyManagment.pdb
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.SqlServer.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.Mvc.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.xml
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.SqlServer.xml
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.xml
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.Mvc.xml
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Rotativa.dll
+F:\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\obj\Debug\PharmacyManagment.csprojResolveAssemblyReference.cache
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\csc.exe
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CodeAnalysis.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CSharp.Core.targets
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.VisualBasic.Core.targets
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\System.Collections.Immutable.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\System.Reflection.Metadata.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\vbc.exe
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\VBCSCompiler.exe
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\VBCSCompiler.exe.config
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PharmacyManagment.dll.config
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PharmacyManagment.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PharmacyManagment.pdb
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Antlr3.Runtime.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.SqlServer.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Microsoft.Web.Infrastructure.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Newtonsoft.Json.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.Mvc.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Rotativa.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Helpers.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Mvc.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Optimization.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Razor.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Deployment.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Razor.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\WebGrease.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.xml
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.SqlServer.xml
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.xml
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.Mvc.xml
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Helpers.xml
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Mvc.xml
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Optimization.xml
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Razor.xml
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.xml
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Deployment.xml
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Razor.xml
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Antlr3.Runtime.pdb
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Newtonsoft.Json.xml
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\obj\Debug\PharmacyManagment.csprojResolveAssemblyReference.cache
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\obj\Debug\PharmacyManagment.dll
+K:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\obj\Debug\PharmacyManagment.pdb
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\csc.exe
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CodeAnalysis.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CSharp.Core.targets
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.VisualBasic.Core.targets
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\System.Collections.Immutable.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\System.Reflection.Metadata.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\vbc.exe
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\VBCSCompiler.exe
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\VBCSCompiler.exe.config
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PharmacyManagment.dll.config
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PharmacyManagment.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PharmacyManagment.pdb
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Antlr3.Runtime.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.SqlServer.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Microsoft.Web.Infrastructure.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Newtonsoft.Json.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.Mvc.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Rotativa.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Helpers.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Mvc.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Optimization.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Razor.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Deployment.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Razor.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\WebGrease.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.xml
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.SqlServer.xml
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.xml
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.Mvc.xml
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Helpers.xml
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Mvc.xml
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Optimization.xml
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Razor.xml
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.xml
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Deployment.xml
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Razor.xml
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Antlr3.Runtime.pdb
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Newtonsoft.Json.xml
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\obj\Debug\PharmacyManagment.csprojResolveAssemblyReference.cache
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\obj\Debug\PharmacyManagment.dll
+J:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\obj\Debug\PharmacyManagment.pdb
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\csc.exe
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\System.Collections.Immutable.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\System.Reflection.Metadata.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\vbc.exe
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\VBCSCompiler.exe
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\roslyn\VBCSCompiler.exe.config
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PharmacyManagment.dll.config
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PharmacyManagment.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PharmacyManagment.pdb
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Antlr3.Runtime.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.SqlServer.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Microsoft.Web.Infrastructure.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Newtonsoft.Json.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.Mvc.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Rotativa.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Helpers.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Mvc.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Optimization.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Razor.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Deployment.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Razor.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\WebGrease.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.xml
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\EntityFramework.SqlServer.xml
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.xml
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\PagedList.Mvc.xml
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Helpers.xml
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Mvc.xml
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Optimization.xml
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.Razor.xml
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.xml
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Deployment.xml
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\System.Web.WebPages.Razor.xml
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Antlr3.Runtime.pdb
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\bin\Newtonsoft.Json.xml
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\obj\Debug\PharmacyManagment.csprojResolveAssemblyReference.cache
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\obj\Debug\PharmacyManagment.dll
+E:\New folder\MY_PROJECT\wep project\ASP.NET Project\PharmacyManagment\PharmacyManagment\obj\Debug\PharmacyManagment.pdb

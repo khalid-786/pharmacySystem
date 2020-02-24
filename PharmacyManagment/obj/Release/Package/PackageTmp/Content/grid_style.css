@@ -1,0 +1,23 @@
+
+.container-fluid {
+	background-color: #ccc;
+	min-height: 100px;
+}
+
+.container-fluid div:not(.row){
+	padding: 15px;
+	border: 1px solid;
+}
+
+.container-fluid .lg div{
+	background-color: red;
+}
+.container-fluid .md div{
+	background-color: lightgreen;
+}
+.container-fluid .sm div{
+	background-color: yellow;
+}
+.container-fluid .xs div{
+	background-color: orange;
+}

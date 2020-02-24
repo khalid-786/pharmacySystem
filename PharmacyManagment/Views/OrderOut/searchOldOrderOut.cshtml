@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "البحث عن فاتورة بيع مسبقة";
+}
+<div class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-4">تاريخ الطلبية</label>
+        <div class="col-md-6">
+            <input type="date"  name="orderDate" id="orderDate" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-4">إسم الدواء</label>
+        <div class="col-md-6">
+            <input class="form-control" style="direction: ltr;" type="text" placeholder="إبحث عن الدواء المراد" name="AutoSearch" id="SearhName" />
+        </div>
+    </div>
+</div>
+    
+    <table class="table OrderOutDetialstable">
+        <thead>
+            <tr>
+                <th>
+                    أسم الدواء
+                </th>
+                <th>
+                    سعر البيع
+                </th>
+                <th>
+                    كمية الدواء
+                </th>
+                <th>
+                    السعر الكلي
+                </th>
+                <th>
+                    تاريخ الشراء
+                </th>
+                <th>خيارات</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    @section Scripts {
+
+        <script>
+           
+            $(function () {
+                $("#SearhName").keyup(function () {
+
+                    var AutoSearch = $(this).val().trim();
+                    var orderDate = $("#orderDate").val();
+                    if (AutoSearch != "") {
+                        $.ajax({
+                            url: "ShowOrderOutToDay",
+                            type: "GET",
+                            data: { AutoSearch: AutoSearch, orderDate: orderDate },
+                            error: function (xhr, error) {
+                                alert("رجاء إملاء جميع الحقول قبل البحث");
+                            },
+                            success: function (data) {
+                                // $("#searchresults").html(result);
+                                if (data != null) {
+                                    $(".OrderOutDetialstable").find("tbody").html(data);
+                                }
+
+                            }
+                        });
+                    }
+                });
+            });
+            function deleteOrder(obj) {
+                if (confirm("هل أنت موافق علي التراجع من عملية البيع ؟")) {
+                    var _this = $(obj).closest(".oldOrderOut-data");
+                    var med_ID =parseInt( _this.find("td").eq(5).html());
+                    var order_ID =parseInt( _this.find("td").eq(0).attr("data-id"));
+                    var payment_QTY = _this.find("td").eq(1).html();
+                    var payment_total_price = _this.find("td").eq(3).html();
+                    $.ajax({
+                        url: "/OrderOut/backpaymedicine",
+                        type: "GET",
+                        data: { med_ID: med_ID, order_ID: order_ID, payment_QTY: payment_QTY, payment_total_price: payment_total_price },
+                        error: function (xhr, error) {
+                            alert("An error occured: " + xhr.status + " " + xhr.statusText ,+""+error);
+                        },
+                        success: function (data) {
+                            // $("#searchresults").html(result);
+                            _this.fadeOut("slow");
+                            var new_totalsum = (parseInt($("#sumprice").val()) - parseInt(payment_total_price));
+                            $("#sumprice").val(new_totalsum);
+                            alert(data);
+                        }
+                    });
+                }
+
+            }
+        </script>
+
+
+    }
+

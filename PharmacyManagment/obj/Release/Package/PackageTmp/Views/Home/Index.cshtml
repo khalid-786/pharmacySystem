@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "إحصائيات الصيدلية";
+}
+
+
+<div class="row">
+    <div class="container home-stats text-center">
+        <h1>إحصائيات الصيدلية</h1>
+            <div class="col-md-3">
+                <div class="stat st-pending">
+                    
+                    <div class="info">
+                         كمية الأدوية المتوفرة في الصيدلية
+                      
+                        <span>@ViewBag.totalMedicine</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat st-item">        
+                    <div class="info">
+                        المبلغ الكلي للأدوية المتبقية
+                        <span><a href=""> @ViewBag.totalMedicinePrice  جنيه</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat st-comment">
+                    <i class="fa fa-comment"></i>
+                    <div class="info">
+                        الأدوية التي تاريخ إنتهاءها أقل من أربعة أشهر
+                        <span><a href="">@ViewBag.UserNameLogin</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,96 @@
+﻿@model IEnumerable<PharmacyManagment.Models.ViewModels.Medicine.MedicineVM>
+
+@{
+    ViewBag.Title = "الأدوية المنتهية";
+}
+
+<h2 >ألأدوية التي التي إنتهت كميتها</h2>
+<table class="table table-bordered table-responsive " >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpiryDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsHasTapes)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedicineName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpiryDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsHasTapes)
+        </td>
+        <td>
+            @Html.ActionLink("تعديل", "EditMedicine", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("تفاصيل الدواء", "DetialsMedicine", new { id = item.Id }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("حذف", "DeleteMedicine", new { id = item.Id }, new { @class = "btn btn-danger delete" })
+        </td>
+    </tr>
+}
+
+</table>
+@section Scripts {
+
+    <script>
+
+$(function () {
+    /*
+    * Confirm Employee deletion
+    */
+    $("a.delete").click(function () {
+        if (!confirm("هل أنت موافق على حذف هذا ادواء من الصيدلية ؟")) return false;
+    });
+    //////////////////////////////////////////////////////////////
+    //search medicine
+    $(function () {
+        $("#SearhName1").keyup(function () {
+            var SearhName = $(this).val().trim();
+
+            var orderDate = $("#orderDate").val();
+            if (SearhName != "") {
+                $.ajax({
+                    url: "SearchMedicines",
+                    type: "GET",
+                    data: { SearhName: SearhName },
+                    error: function (xhr, error) {
+                        alert("An error occured: " + xhr.status + " " + xhr.statusText);
+                    },
+                    success: function (data) {
+                        // $("#searchresults").html(result);
+                        if (data != null) {
+                            $(".medicineinfotable").find("tbody").html(data);
+                        }
+
+                    }
+                });
+            }
+        });
+    });
+});
+
+    </script>
+}
+
+

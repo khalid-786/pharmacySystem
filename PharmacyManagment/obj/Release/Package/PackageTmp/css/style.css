@@ -1,0 +1,69 @@
+@font-face {
+ font-family:initial;
+ /*src:url('font/AGA-IslamicPhrases')*/
+}
+@font-face {
+ font-family:inherit;
+ /*src:url('font/DecoType Professional Naskh Supplement 3 Swashes')*/
+}
+body{
+   
+}
+.mynav {
+ background-color:#0c5c82;
+ border-color:#e7e7e7;
+ margin-bottom:auto;
+}
+.navbar-default .navbar-nav > li > a {
+ color:#FFF;
+ font-family:'Myriad ÚÑÈí';
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color:#EEE;
+  border-bottom:solid 3px #ba1675;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: -15px;
+    float: right;
+    color: antiquewhite;
+}
+.logo-size {
+width: 137px;
+height: 34px;
+}
+.navbar-user {
+    padding:10px;
+    padding-bottom:0;
+    width:250px;
+}
+
+.img-size{
+    font-size:70px;
+}
+.mybtn {
+color:#FFF;
+
+}
+.myfooter {
+ background-color:#0c5c82;
+ font-family:myfont;
+ padding:10px;
+ color:#FFF;
+}
+.subfooter {
+     background-color:darkblue;
+     font-family:myfont2;
+     padding:10px;
+}
+.myfooter  ul  li  a {
+  color:#FFF;
+}
+
+#SearhName {
+    width:130px;
+    margin-top:8px;
+    transition:width 0.4s ease-in-out;
+}
+#SearhName:hover{
+    width:230px;
+}

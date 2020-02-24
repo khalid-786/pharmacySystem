@@ -1,0 +1,73 @@
+﻿@model IEnumerable<PharmacyManagment.Models.ViewModels.Medicine.MedicineVM>
+
+@{
+    ViewBag.Title = " الأدويةالصلاحية أقل من أربعة شهور";
+}
+
+<div class="alert alert-info text-center">
+    <h2 style="color:#000;">  قائمة جميع الأدوية التي  صلاحيتها تبقت لها أقل من أو يساوي أربع أشهر </h2>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MedicineName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpiryDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsHasTapes)
+        </th>
+        <th "></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicineName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @item.ExpiryDate.ToShortDateString()
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsHasTapes)
+            </td>
+            <td colspan="3">
+                @Html.ActionLink("تعديل", "EditMedicine", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("تفاصيل الدواء", "DetialsMedicine", new { id = item.Id }, new { @class = "btn btn-info" }) |
+                @Html.ActionLink("حذف", "DeleteMedicine", new { id = item.Id }, new { @class = "btn btn-danger delete" })
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section Scripts {
+
+    <script>
+
+$(function () {
+    /*
+    * Confirm Employee deletion
+    */
+    $("a.delete").click(function () {
+        if (!confirm("هل أنت موافق على حذف هذا ادواء من الصيدلية ؟")) return false;
+    });
+    //////////////////////////////////////////////////////////////
+});
+
+    </script>
+}

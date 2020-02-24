@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "إحصائيات الصيدلية";
+}
+<div class="text-center"><h1 class="text-center text-info">إحصائيات الصيدلية</h1></div>
+
+<div class="row">
+    <div class="container home-stats text-center">
+        
+            <div class="col-md-3">
+                <div class="stat st-pending">
+                    
+                    <div class="info">
+                         كمية الأدوية المتوفرة في الصيدلية
+                      
+                        <span>@ViewBag.totalMedicine</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat st-item">        
+                    <div class="info">
+                        المبلغ الكلي للأدوية المتبقية بالجنيه
+                        <span><a href=""> @ViewBag.totalMedicinePrice  </a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat st-comment">
+                    <div class="info">
+                        الأدوية التي تاريخ إنتهاءها أقل من أربعة أشهر
+                        <span><a href="/Medicine/ShowMedicinesOfExpiryDateLessThanOrEquel4Months">@ViewBag.medicineRemain4Month</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="container home-stats text-center">
+        <div class="col-md-3">
+            <div class="stat st-pending">
+
+                <div class="info">
+                    الأدوية التي إنتهت صلاحيتها
+
+                    <span><a href="/Medicine/ShowMedicinesOutOfDate">@ViewBag.medicineOutOfDate</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat st-item">
+                <div class="info">
+                    الفواتير التي لم يتم تسديدها
+                    <span><a href="/OrderIn/UnPaidOrder"> @ViewBag.UnpaidExpence  جنيه</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stat st-comment">
+                <div class="info">
+                    الأدوية التي إنتهت كميتها
+                    <span><a href="/Medicine/ShowMedicinesEnded">@ViewBag.endMedicine</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

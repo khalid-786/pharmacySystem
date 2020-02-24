@@ -1,0 +1,129 @@
+﻿@model IEnumerable<PharmacyManagment.Models.ViewModels.OrderIn.OrderInDetialsVM>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>printOrderInfo</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container" style="max-width:410px;">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="text-center " style="font-size:23px;">
+                    بسم الله الرحمن الرحيم<br />
+                    فاتورة شراء أدوية
+                </div>
+                <table class="table table-bordered table-responsive " style="direction:rtl;">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.MedicineName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.MedicineQuantity)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.MedicinePrice)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TotalPrice)
+                        </th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MedicineName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MedicineQuantity)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MedicinePrice)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TotalPrice)
+                            </td>
+                        </tr>
+
+                    }
+                    @{
+
+                        int totalQuantity = 0, totalprice = 0;
+                        foreach (var item in Model)
+                        {
+                            totalQuantity += item.MedicineQuantity;
+                            totalprice += item.TotalPrice;
+
+                        }
+                        <tr>
+                            <td>المجموع</td>
+                            <td>@totalQuantity</td>
+                            <td></td>
+                            <td>@totalprice</td>
+                        </tr>
+                    }
+
+                </table>
+                <br /><hr />
+                <table class="table table-bordered table-responsive " style="direction:rtl;">
+                    <tr>
+                        <th>
+                            تاريخ الشراء
+                        </th>
+                        <th>
+                            المبلغ المدفوع
+                        </th>
+                        <th>
+                            المبلغ المتبقي
+                        </th>
+                        <th>
+                            تاريخ التسديد
+                        </th>
+
+                    </tr>
+                    <tr>
+                        <th>
+                            @ViewBag.OrderDate
+                        </th>
+                        <th>
+                            @ViewBag.Paidprice
+                        </th>
+                        <th>
+                            @ViewBag.Unpaidprice
+                        </th>
+                        <th>
+                            @ViewBag.payementDate
+                        </th>
+
+                    </tr>
+                </table>
+                <div class="row" style="direction:rtl;">
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <label class="col-md-4">إسم الصيدلية :  ..................... </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4">التوقيع :  .......................</label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/bootstrap.js"></script>
+</body>
+</html>

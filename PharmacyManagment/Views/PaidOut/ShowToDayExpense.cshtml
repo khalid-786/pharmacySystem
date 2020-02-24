@@ -1,0 +1,57 @@
+﻿@model IEnumerable<PharmacyManagment.Models.ViewModels.Expense.ExpenseDetialsVM>
+@{
+    ViewBag.Title = "مصروفات اليوم";
+}
+<p>
+    @Html.ActionLink("صرفية جديدة", "AddExpense" ,null , new { @class = "btn btn-info"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Expense_Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Expense_Date)
+        </th>
+        <th>
+           المبلغ المصروف
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Expense_Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Expense_Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Expense_Quantitative)
+        </td>
+    </tr>
+}
+    @{
+
+        int totalQuantity = 0;
+        foreach (var item in Model)
+        {
+            totalQuantity += item.Expense_Quantitative;
+
+
+        }
+        <tr>
+            <td>المجموع</td>
+            <td></td>
+            <td></td>
+            <td>@totalQuantity</td>
+        </tr>
+    }
+
+</table>

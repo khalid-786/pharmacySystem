@@ -1,0 +1,62 @@
+﻿@model IEnumerable<PharmacyManagment.Models.ViewModels.Account.CustomerVM>
+
+@{
+    ViewBag.Title = "جميع العملاء";
+}
+
+<div class="alert alert-info text-center">
+    <h2 style="color:#000;">قائمة جميع العملاء الذين تتعامل معهم لشراء الأدوية </h2>
+</div>
+<p>
+    @Html.ActionLink("إضافة عميل جديد", "AddCustomer" ,null , new { @class = "btn btn-primary"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.ActionLink("تعديل", "EditCustomer", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+            @Html.ActionLink("حذف", "DeleteCustomer", new { id = item.Id }, new { @class = "btn btn-danger delete" })
+        </td>
+    </tr>
+}
+
+</table>
+
+@section Scripts {
+
+    <script>
+
+$(function () {
+    /*
+    * Confirm Employee deletion
+    */
+    $("a.delete").click(function () {
+        if (!confirm("هل أنت موافق على حذف هذا العميل")) return false;
+    });
+    //////////////////////////////////////////////////////////////
+});
+
+    </script>
+}

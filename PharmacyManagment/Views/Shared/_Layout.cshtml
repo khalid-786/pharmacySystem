@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+            @Scripts.Render("~/bundles/modernizr")
+            <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/collapsing.width.css" rel="stylesheet" />
+    <link href="~/Content/grid_style.css" rel="stylesheet" />
+
+    <link href="~/Content/backend.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrap" class="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("نظام إدارة الصيدلية", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        @if (Request.IsAuthenticated)
+                        {
+                            
+                            <li><a href="/account/logout">تسجيل الخروج <span class="fa fa-archway fa-lg"></span> </a></li>
+                            <li><a href="/Home/Index">إحصائيات الصيدلية <span class="fa fa-archway fa-lg"></span> </a></li>
+                            <li>
+                                <a href="/OrderOut/searchOldOrderOut">
+                                    <span class="hidden-on-collapse">  البحث عن فاتورة بيع قديمة</span>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            if (ViewBag.Title == "تسجيل الدخول")
+                            {
+
+                                <li class="active"><a href="/account/login"><span class="fa fa-user fa-lg"></span>  تسجيل الدخول</a></li>
+                            }
+                            else
+                            {
+                                
+                                <li><a href="/account/login"><span class="fa fa-user fa-lg"></span> تسجيل الدخول</a></li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <!-- sales start -->
+
+                <div class="gnav">
+                    <div class="gnav-header" style="background-color: #000">
+                        <a class="has-childs collapse" role="button" data-toggle="collapse" href="#collapsesales" aria-expanded="false" aria-controls="collapsesales">
+                            <span class="fa fa-edit"></span>
+                            <span class="hidden-on-collapse"> المبيعات</span>
+                        </a>
+                    </div>
+                    <ul class="subnav collapse in" id="collapsesales">
+
+                        @if (Request.IsAuthenticated)
+                        {
+                            <li>
+                                <div class="gnav">
+                                    <div class="gnav-header">
+                                        <a class="has-childs collapse" role="button" data-toggle="collapse" href="#collapseprice_requests" aria-expanded="false" aria-controls="collapseprice_requests">
+                                            <span class="fa fa-edit"></span>
+                                            <span class="hidden-on-collapse"> إدارة الموظفين</span>
+                                        </a>
+                                    </div>
+                                    <ul class="subnav collapse" id="collapseprice_requests">
+                                        <li>
+                                            <a href="/account/AddAdmin">
+                                                <span class="fa fa-edit"></span>
+                                                <span class="hidden-on-collapse"> إضافة مدير</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/account/AddEmployee">
+                                                <span class="fa fa-edit"></span>
+                                                <span class="hidden-on-collapse">إضافة موظف</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/account/ShowEmployee">
+                                                <span class="fa fa-edit"></span>
+                                                <span class="hidden-on-collapse"> قائمة الموظفين و مدراء النظام</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gnav">
+                                    <div class="gnav-header">
+                                        <a class="has-childs collapse" role="button" data-toggle="collapse" href="#collapquotations" aria-expanded="false" aria-controls="collapquotations">
+                                            <span class="fa fa-edit"></span>
+                                            <span class="hidden-on-collapse"> إدارة العملاء </span>
+                                        </a>
+                                    </div>
+                                    <ul class="subnav collapse" id="collapquotations">
+
+                                        <li>
+                                            <a href="/account/AddCustomer">
+                                                <span class="fa fa-edit"></span>
+                                                <span class="hidden-on-collapse">إضافة عميل جديد</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/account/ShowCustomers">
+                                                <span class="fa fa-edit"></span>
+                                                <span class="hidden-on-collapse">  عروض جميع العملاء</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gnav">
+                                    <div class="gnav-header">
+                                        <a class="has-childs collapse" role="button" data-toggle="collapse" href="#payment_requests" aria-expanded="false" aria-controls="collapseprice_requests">
+                                            <span class="fa fa-edit"></span>
+                                            <span class="hidden-on-collapse"> إدارة المبيعات</span>
+                                        </a>
+                                    </div>
+                                    <ul class="subnav collapse" id="payment_requests">
+                                        <li>
+                                            <a href="/OrderOut/AddOrderOut">
+                                                <span class="fa fa-edit"></span>
+                                                <span class="hidden-on-collapse"> إجراء عملية بيع</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/account/ShowEmployee">
+                                                <span class="fa fa-edit"></span>
+                                                <span class="hidden-on-collapse"> قائمة الموظفين و مدراء النظام</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        }
+                        
+                       
+                        <li>
+                            <div class="gnav">
+                                <div class="gnav-header">
+                                    <a class="has-childs collapse" role="button" data-toggle="collapse" href="#collapsepurchase_orders" aria-expanded="false" aria-controls="collapsepurchase_orders">
+                                        <span class="fa fa-edit"></span>
+                                        <span class="hidden-on-collapse"> إدارة الأدوية للصيدلية</span>
+                                    </a>
+                                </div>
+                                <ul class="subnav collapse" id="collapsepurchase_orders">
+
+                                    <li>
+                                        <a href="/Medicine/AddMedicine">
+                                            <span class="fa fa-edit"></span>
+                                            <span class="hidden-on-collapse">إضافة دواء جديد</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/Medicine/ShowMedicines">
+                                            <span class="fa fa-edit"></span>
+                                            <span class="hidden-on-collapse">  عرض قائمة الأدوية</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/OrderOut/searchOldOrderOut">
+                                            <span class="fa fa-edit"></span>
+                                            <span class="hidden-on-collapse">  البحث عن فاتورة بيع قديمة</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Medicine/ShowMedicinesEnded">
+                                            <span class="fa fa-edit"></span>
+                                            <span class="hidden-on-collapse">  الأدوية التي إنتهت كميتها</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Medicine/ShowMedicinesOutOfDate">
+                                            <span class="fa fa-edit"></span>
+                                            <span class="hidden-on-collapse">أدوية منتهية الصلاحية</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/Medicine/ShowMedicinesOfExpiryDateLessThanOrEquel4Months">
+                                            <span class="fa fa-edit"></span>
+                                            <span class="hidden-on-collapse">  أدوية ذات صلاحيتها أقل من 4 أشهر</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="gnav">
+                                <div class="gnav-header">
+                                    <a class="has-childs collapse" role="button" data-toggle="collapse" href="#collapsedelivery_forms" aria-expanded="false" aria-controls="collapsedelivery_forms">
+                                        <span class="fa fa-edit"></span>
+                                        <span class="hidden-on-collapse"> قائمة الطلبيات </span>
+                                    </a>
+                                </div>
+                                <ul class="subnav collapse" id="collapsedelivery_forms">
+
+                                    <li>
+                                        <a href="/OrderIn/receiptOrderIn">
+                                            <span class="fa fa-edit"></span>
+                                            <span class="hidden-on-collapse">إستلام منتجات</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/OrderIn/UnPaidOrder">
+                                            <span class="fa fa-edit"></span>
+                                            <span class="hidden-on-collapse">   فواتير الشراء الغير مدفوعة</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="gnav">
+                                <div class="gnav-header">
+                                    <a class="has-childs collapse" role="button" data-toggle="collapse" href="#collapseinvoice_clts" aria-expanded="false" aria-controls="collapseinvoice_clts">
+                                        <span class="fa fa-edit"></span>
+                                        <span class="hidden-on-collapse"> قائمة المصروفات</span>
+                                    </a>
+                                </div>
+                                <ul class="subnav collapse" id="collapseinvoice_clts">
+
+                                    <li>
+                                        <a href="/PaidOut/AddExpense">
+                                            <span class="fa fa-edit"></span>
+                                            <span class="hidden-on-collapse">إجراء عملية صرف</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/PaidOut/ShowToDayExpense">
+                                            <span class="fa fa-edit"></span>
+                                            <span class="hidden-on-collapse">    مصروفات اليوم</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- sales end -->
+
+
+
+
+
+            </section>
+        </aside>
+        <div class=" content-wrapper">
+            @RenderBody()
+        </div>
+       
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $('#btn-sidebar-collapse').click(function () {
+
+                if ($('body').hasClass('has-mini-sidebar'))
+                    $('body').removeClass('has-mini-sidebar')
+                else
+                    $('body').addClass('has-mini-sidebar')
+            });
+
+        });
+    </script>
+    <script src="~/js/jquery-1.11.3.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/frontend.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    
+    
+        
+</body>
+</html>
